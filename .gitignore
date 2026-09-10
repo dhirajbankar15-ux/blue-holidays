@@ -1,0 +1,46 @@
+# --- Secrets --------------------------------------------------------------
+# .env holds SMTP credentials and the JWT signing key. Never commit it.
+# .env.example is committed instead, with the values blanked.
+.env
+.env.*
+!.env.example
+
+# --- Captured leads -------------------------------------------------------
+# Customer names, phone numbers and email addresses. Never commit these.
+data/leads.ndjson
+leads.ndjson
+*.ndjson
+
+# --- Dependencies ---------------------------------------------------------
+node_modules/
+
+# package-lock.json IS committed on purpose, so a deploy installs the exact
+# versions that were tested here.
+
+# --- Logs and runtime -----------------------------------------------------
+logs/
+*.log
+npm-debug.log*
+pids/
+*.pid
+
+# --- Local backups --------------------------------------------------------
+_backup-*/
+*.bak
+*.orig
+
+# --- Editors and OS -------------------------------------------------------
+.vscode/
+.idea/
+.windsurf/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Build output ---------------------------------------------------------
+dist/
+build/
+tmp/
+temp/

@@ -1,0 +1,442 @@
+{
+  "images": [
+    {
+      "file": "thailand_1.jpg",
+      "destination": "thailand",
+      "caption": "Wat Arun on the Chao Phraya, Bangkok",
+      "pexels_id": "5264308",
+      "source": "https://www.pexels.com/photo/5264308/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "thailand_2.jpg",
+      "destination": "thailand",
+      "caption": "The Grand Palace, Bangkok",
+      "pexels_id": "11105014",
+      "source": "https://www.pexels.com/photo/11105014/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "thailand_3.jpg",
+      "destination": "thailand",
+      "caption": "Limestone islands off Krabi",
+      "pexels_id": "4981193",
+      "source": "https://www.pexels.com/photo/4981193/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "thailand_4.jpg",
+      "destination": "thailand",
+      "caption": "Cliffs above the Andaman",
+      "pexels_id": "19595559",
+      "source": "https://www.pexels.com/photo/19595559/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "dubai_1.jpg",
+      "destination": "dubai",
+      "caption": "Downtown Dubai after dark",
+      "pexels_id": "5577693",
+      "source": "https://www.pexels.com/photo/5577693/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "dubai_2.jpg",
+      "destination": "dubai",
+      "caption": "Dune country outside the city",
+      "pexels_id": "8869381",
+      "source": "https://www.pexels.com/photo/8869381/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "dubai_3.jpg",
+      "destination": "dubai",
+      "caption": "Sheikh Zayed Grand Mosque, Abu Dhabi",
+      "pexels_id": "6095151",
+      "source": "https://www.pexels.com/photo/6095151/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "dubai_4.jpg",
+      "destination": "dubai",
+      "caption": "The Marina from the air",
+      "pexels_id": "28350360",
+      "source": "https://www.pexels.com/photo/28350360/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "singapore_1.jpg",
+      "destination": "singapore",
+      "caption": "Gardens by the Bay",
+      "pexels_id": "4239738",
+      "source": "https://www.pexels.com/photo/4239738/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "singapore_2.jpg",
+      "destination": "singapore",
+      "caption": "The Marina Bay skyline",
+      "pexels_id": "5097071",
+      "source": "https://www.pexels.com/photo/5097071/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "singapore_3.jpg",
+      "destination": "singapore",
+      "caption": "Shophouse colour in the old quarters",
+      "pexels_id": "2426554",
+      "source": "https://www.pexels.com/photo/2426554/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "singapore_4.jpg",
+      "destination": "singapore",
+      "caption": "The bay lit up after dark",
+      "pexels_id": "18662417",
+      "source": "https://www.pexels.com/photo/18662417/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "bali_1.jpg",
+      "destination": "bali",
+      "caption": "Tanah Lot at sunset",
+      "pexels_id": "4946925",
+      "source": "https://www.pexels.com/photo/4946925/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "bali_2.jpg",
+      "destination": "bali",
+      "caption": "Rice terraces above Ubud",
+      "pexels_id": "2088019",
+      "source": "https://www.pexels.com/photo/2088019/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "bali_3.jpg",
+      "destination": "bali",
+      "caption": "The cliffs of Nusa Penida",
+      "pexels_id": "6407829",
+      "source": "https://www.pexels.com/photo/6407829/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "bali_4.jpg",
+      "destination": "bali",
+      "caption": "Waterfalls in the jungle",
+      "pexels_id": "7987626",
+      "source": "https://www.pexels.com/photo/7987626/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "vietnam_1.jpg",
+      "destination": "vietnam",
+      "caption": "Cruising through Ha Long Bay",
+      "pexels_id": "5531543",
+      "source": "https://www.pexels.com/photo/5531543/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "vietnam_2.jpg",
+      "destination": "vietnam",
+      "caption": "Lantern-lit Hoi An",
+      "pexels_id": "13222573",
+      "source": "https://www.pexels.com/photo/13222573/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "vietnam_3.jpg",
+      "destination": "vietnam",
+      "caption": "The Golden Bridge, Ba Na Hills",
+      "pexels_id": "14435439",
+      "source": "https://www.pexels.com/photo/14435439/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "maldives_1.jpg",
+      "destination": "maldives",
+      "caption": "Overwater villas on the lagoon",
+      "pexels_id": "9394311",
+      "source": "https://www.pexels.com/photo/9394311/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "maldives_2.jpg",
+      "destination": "maldives",
+      "caption": "The reef",
+      "pexels_id": "13377561",
+      "source": "https://www.pexels.com/photo/13377561/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "maldives_3.jpg",
+      "destination": "maldives",
+      "caption": "Atolls from the air",
+      "pexels_id": "12433146",
+      "source": "https://www.pexels.com/photo/12433146/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "maldives_4.jpg",
+      "destination": "maldives",
+      "caption": "Empty white sand",
+      "pexels_id": "12001663",
+      "source": "https://www.pexels.com/photo/12001663/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "malaysia_1.jpg",
+      "destination": "malaysia",
+      "caption": "The Petronas Towers, Kuala Lumpur",
+      "pexels_id": "9395978",
+      "source": "https://www.pexels.com/photo/9395978/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "malaysia_2.jpg",
+      "destination": "malaysia",
+      "caption": "Langkawi's coastline",
+      "pexels_id": "5219897",
+      "source": "https://www.pexels.com/photo/5219897/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "malaysia_3.jpg",
+      "destination": "malaysia",
+      "caption": "Rainforest and limestone country",
+      "pexels_id": "14313645",
+      "source": "https://www.pexels.com/photo/14313645/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "srilanka_1.jpg",
+      "destination": "srilanka",
+      "caption": "Sigiriya rock fortress",
+      "pexels_id": "34128249",
+      "source": "https://www.pexels.com/photo/34128249/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "srilanka_2.jpg",
+      "destination": "srilanka",
+      "caption": "The Nine Arch Bridge, Ella",
+      "pexels_id": "2403209",
+      "source": "https://www.pexels.com/photo/2403209/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "srilanka_3.jpg",
+      "destination": "srilanka",
+      "caption": "The southern coast",
+      "pexels_id": "30310146",
+      "source": "https://www.pexels.com/photo/30310146/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "mauritius_1.jpg",
+      "destination": "mauritius",
+      "caption": "The lagoon from the air",
+      "pexels_id": "7744992",
+      "source": "https://www.pexels.com/photo/7744992/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "mauritius_2.jpg",
+      "destination": "mauritius",
+      "caption": "Turquoise bays",
+      "pexels_id": "34870508",
+      "source": "https://www.pexels.com/photo/34870508/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "mauritius_3.jpg",
+      "destination": "mauritius",
+      "caption": "Le Morne",
+      "pexels_id": "6789857",
+      "source": "https://www.pexels.com/photo/6789857/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "mauritius_4.jpg",
+      "destination": "mauritius",
+      "caption": "Waterfalls inland",
+      "pexels_id": "23232507",
+      "source": "https://www.pexels.com/photo/23232507/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "kashmir_1.jpg",
+      "destination": "kashmir",
+      "caption": "Houseboats on Dal Lake",
+      "pexels_id": "12750077",
+      "source": "https://www.pexels.com/photo/12750077/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "kashmir_2.jpg",
+      "destination": "kashmir",
+      "caption": "Snow at Gulmarg",
+      "pexels_id": "35672518",
+      "source": "https://www.pexels.com/photo/35672518/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "kashmir_3.jpg",
+      "destination": "kashmir",
+      "caption": "The Pahalgam valley",
+      "pexels_id": "13927123",
+      "source": "https://www.pexels.com/photo/13927123/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "kashmir_4.jpg",
+      "destination": "kashmir",
+      "caption": "Chinar and meadow",
+      "pexels_id": "18453079",
+      "source": "https://www.pexels.com/photo/18453079/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "kerala_1.jpg",
+      "destination": "kerala",
+      "caption": "The Alleppey backwaters",
+      "pexels_id": "30778230",
+      "source": "https://www.pexels.com/photo/30778230/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "kerala_2.jpg",
+      "destination": "kerala",
+      "caption": "Tea estates at Munnar",
+      "pexels_id": "36982207",
+      "source": "https://www.pexels.com/photo/36982207/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "kerala_3.jpg",
+      "destination": "kerala",
+      "caption": "Kathakali",
+      "pexels_id": "36842411",
+      "source": "https://www.pexels.com/photo/36842411/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "kerala_4.jpg",
+      "destination": "kerala",
+      "caption": "Palms along the water",
+      "pexels_id": "6544756",
+      "source": "https://www.pexels.com/photo/6544756/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "rajasthan_1.jpg",
+      "destination": "rajasthan",
+      "caption": "Hawa Mahal, Jaipur",
+      "pexels_id": "28801422",
+      "source": "https://www.pexels.com/photo/28801422/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "rajasthan_2.jpg",
+      "destination": "rajasthan",
+      "caption": "Carved havelis in Udaipur",
+      "pexels_id": "17397822",
+      "source": "https://www.pexels.com/photo/17397822/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    },
+    {
+      "file": "rajasthan_3.jpg",
+      "destination": "rajasthan",
+      "caption": "Camp country in the Thar",
+      "pexels_id": "9497619",
+      "source": "https://www.pexels.com/photo/9497619/",
+      "licence": "Pexels License",
+      "licence_url": "https://www.pexels.com/license/"
+    }
+  ],
+  "rejected": [
+    {
+      "image": "vietnam #17111168",
+      "reason": "two identifiable street vendors, plus a readable shop sign"
+    },
+    {
+      "image": "vietnam #26673556",
+      "reason": "stock photo of a couple's hands; not the Golden Bridge"
+    },
+    {
+      "image": "vietnam #26926327",
+      "reason": "snow-capped Himalayan peak; not Vietnamese rice terraces"
+    },
+    {
+      "image": "rajasthan #30522971",
+      "reason": "close-up of an identifiable person"
+    },
+    {
+      "image": "rajasthan #37530101",
+      "reason": "generic white building, not identifiably Rajasthani"
+    },
+    {
+      "image": "srilanka #17092145",
+      "reason": "boulder outcrop, not a tea estate"
+    },
+    {
+      "image": "srilanka #18463840",
+      "reason": "power lines and trees, not a temple"
+    },
+    {
+      "image": "malaysia #38320074",
+      "reason": "daytime aerial captioned as a night skyline"
+    },
+    {
+      "image": "thailand #11072 (video)",
+      "reason": "Javanese candi towers, not Thai architecture"
+    },
+    {
+      "image": "singapore (card round)",
+      "reason": "Palm Jumeirah, Dubai, returned for a Sentosa query"
+    }
+  ]
+}

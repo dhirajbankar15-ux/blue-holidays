@@ -1,0 +1,15 @@
+Destination footage — Mixkit Free License  (https://mixkit.co/license/)
+Free for commercial use, no attribution required. Redistribution as
+standalone stock footage is not permitted.
+
+thailand.mp4   id 21920  Night lights throughout Bangkok
+               (id 11072 'ancient temple' was rejected: the towers are
+                Javanese candi, not Thai architecture)
+dubai.mp4      id 30985  Landscape of the Palm Jumeirah
+singapore.mp4  id 20177  Singapore gardens and lake fountain
+bali.mp4       id 16131  Aerial turquoise waves on cliffs
+vietnam.mp4    id 44916  Islands of Ha Long Bay
+maldives.mp4   id 7076   The sunset and the sea
+
+Poster stills in ../img/ are the first frame of each clip, same source
+and licence.
