@@ -623,7 +623,7 @@ textarea {
 
 .dock {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) auto;
   gap: 4px;
   align-items: end;
   margin-top: 42px;

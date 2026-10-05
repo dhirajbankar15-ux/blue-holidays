@@ -305,12 +305,20 @@
       var dockMonth = document.getElementById("dockMonth");
       var dockPax = document.getElementById("dockPax");
       var dockCity = document.getElementById("dockCity");
+      var dockDuration = document.getElementById("dockDuration");
+
+      var notes = "";
+      if (dockCity && dockCity.value) notes += "Flying from " + dockCity.value + ". ";
+      if (dockDuration && dockDuration.value) {
+        var duration = parseInt(dockDuration.value, 10);
+        if (!isNaN(duration)) notes += "Trip duration: " + duration + " nights. ";
+      }
 
       enquiry({
         destination: dockDest ? dockDest.value : null,
         month: dockMonth ? dockMonth.value : null,
         pax: dockPax ? paxFromLabel[dockPax.value] || 2 : null,
-        notes: dockCity && dockCity.value ? "Flying from " + dockCity.value + "." : ""
+        notes: notes.trim() ? notes.trim() : null
       });
     },
 
@@ -384,6 +392,7 @@
         "Destination: " + lead.destination + "\n" +
         "Travel month: " + lead.month + "\n" +
         "Travellers: " + lead.pax + "\n" +
+        "Duration: " + (lead.duration || "-") + " nights\n" +
         "Notes: " + (lead.notes || "-")
       );
     }
@@ -421,6 +430,7 @@
         destination: value("custDest"),
         month: value("custMonth"),
         pax: parseInt(value("custPax"), 10) || 1,
+        duration: parseInt(value("custDuration"), 10) || null,
         notes: value("custNotes")
       };
 

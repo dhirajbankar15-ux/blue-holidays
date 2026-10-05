@@ -224,7 +224,7 @@
           <div class="dock">
             <div class="dock__field">
               <label for="dockDest">Where to</label>
-              <select id="dockDest">
+              <select id="dockDest" aria-label="Choose destination">
                 <option value="Thailand">Thailand</option>
                 <option value="Dubai &amp; Abu Dhabi">Dubai &amp; Abu Dhabi</option>
                 <option value="Singapore">Singapore</option>
@@ -242,22 +242,26 @@
             </div>
             <div class="dock__field">
               <label for="dockCity">Flying from</label>
-              <input type="text" id="dockCity" value="Pune / Mumbai" autocomplete="off" />
+              <input type="text" id="dockCity" value="Pune / Mumbai" autocomplete="off" aria-label="Departure city" />
             </div>
             <div class="dock__field">
               <label for="dockMonth">Roughly when</label>
-              <input type="month" id="dockMonth" value="2026-11" />
+              <input type="month" id="dockMonth" value="2026-11" aria-label="Travel month" />
             </div>
             <div class="dock__field">
               <label for="dockPax">Who's going</label>
-              <select id="dockPax">
+              <select id="dockPax" aria-label="Number of travellers">
                 <option>2 Adults (Couple)</option>
                 <option>4 Adults (Group Offer)</option>
                 <option>Family (2A + 2C)</option>
                 <option>Corporate MICE (10+)</option>
               </select>
             </div>
-            <button class="btn btn--primary" type="button" data-act="enquiry">
+            <div class="dock__field">
+              <label for="dockDuration">Duration (nights)</label>
+              <input type="number" id="dockDuration" min="1" max="30" value="5" aria-label="Trip duration in nights" />
+            </div>
+            <button class="btn btn--primary" type="button" data-act="enquiry" aria-label="Start planning your trip">
               <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Start planning
             </button>
           </div>
