@@ -417,7 +417,19 @@
       if (Date.now() - loadedAt < 3000) return;
 
       if (!form.checkValidity()) {
-        setStatus("error", "Please fill in your name, phone number and email.");
+        var nameField = document.getElementById("custName");
+        var phoneField = document.getElementById("custPhone");
+        var emailField = document.getElementById("custEmail");
+
+        if (!nameField || !nameField.value.trim()) {
+          setStatus("error", "Please enter your name.");
+        } else if (!phoneField || !phoneField.value.trim()) {
+          setStatus("error", "Please enter your phone number.");
+        } else if (!emailField || !emailField.value.trim()) {
+          setStatus("error", "Please enter your email address.");
+        } else {
+          setStatus("error", "Please check all required fields.");
+        }
         form.reportValidity();
         return;
       }

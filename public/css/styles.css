@@ -663,6 +663,12 @@ textarea {
   padding: 0;
 }
 
+.dock__field input:focus,
+.dock__field select:focus {
+  outline: 1px solid var(--blue-jet);
+  outline-offset: 2px;
+}
+
 .dock__field select option {
   background: var(--ink-700);
 }
@@ -718,6 +724,11 @@ textarea {
 .btn:disabled {
   opacity: 0.55;
   cursor: progress;
+}
+
+.btn:focus-visible {
+  outline: 2px solid var(--blue-jet);
+  outline-offset: 2px;
 }
 
 /* =========================================================================
