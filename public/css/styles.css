@@ -570,6 +570,17 @@ textarea {
   margin-bottom: 24px;
 }
 
+.footer-logo {
+  display: inline-block;
+  margin-bottom: 16px;
+}
+
+.footer-logo-img {
+  max-width: 180px;
+  height: auto;
+  display: block;
+}
+
 .now-showing {
   display: flex;
   align-items: center;
