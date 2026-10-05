@@ -466,6 +466,36 @@
   })();
 
   /* =======================================================================
+     Passport Desk Tabs
+     ======================================================================= */
+
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll(".passport__tab"));
+    if (!tabs.length) return;
+
+    function show(tabName) {
+      tabs.forEach(function (tab) {
+        var isActive = tab.dataset.tab === tabName;
+        tab.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+
+      var contents = Array.prototype.slice.call(document.querySelectorAll(".passport__content"));
+      contents.forEach(function (content) {
+        var isActive = (content.id === tabName + "-content");
+        content.style.display = isActive ? "block" : "none";
+      });
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        show(tab.dataset.tab);
+      });
+    });
+
+    show("normal");
+  })();
+
+  /* =======================================================================
      Footer year
      ======================================================================= */
 

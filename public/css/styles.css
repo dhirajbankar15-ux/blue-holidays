@@ -18,23 +18,25 @@
 }
 
 :root {
-  --ink-900: #05090f;
-  --ink-800: #0a111c;
-  --ink-700: #101a2a;
-  --ink-600: #16243a;
+  --ink-900: #0f1423;
+  --ink-800: #1a2340;
+  --ink-700: #253354;
+  --ink-600: #304568;
 
-  --gold: #c8a44d;
+  --blue-jet: #1e64c8;
+  --blue-light: #3b7dd8;
+  --gold: #d4af37;
   --gold-soft: #e4c878;
-  --sky: #8fb8d8;
-  --positive: #4fae7f;
-  --negative: #d1746a;
+  --sky: #64b5f6;
+  --positive: #66bb6a;
+  --negative: #ef5350;
 
-  --text: #eef2f7;
-  --muted: #93a1b5;
+  --text: #f5f7fb;
+  --muted: #9fadc4;
   --faint: #8b98ad; /* 6.4:1 on --ink-800; #64748b failed WCAG AA */
 
-  --line: rgba(232, 214, 166, 0.14);
-  --line-strong: rgba(232, 214, 166, 0.28);
+  --line: rgba(30, 100, 200, 0.12);
+  --line-strong: rgba(30, 100, 200, 0.25);
   --glass: rgba(10, 17, 28, 0.66);
   --glass-solid: rgba(10, 17, 28, 0.92);
 
@@ -437,6 +439,59 @@ textarea {
   color: var(--ink-900);
 }
 
+.passport__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 32px 0 24px 0;
+}
+
+.passport__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: rgba(10, 17, 28, 0.5);
+  backdrop-filter: blur(10px);
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+
+.passport__tab i {
+  font-size: 13px;
+  color: var(--blue-jet);
+  transition: color 0.3s var(--ease);
+}
+
+.passport__tab:hover {
+  color: var(--text);
+  border-color: var(--blue-jet);
+}
+
+.passport__tab[aria-selected="true"] {
+  background: var(--blue-jet);
+  border-color: var(--blue-jet);
+  color: #ffffff;
+}
+
+.passport__tab[aria-selected="true"] i {
+  color: #ffffff;
+}
+
+.passport__content {
+  animation: fadeIn 0.3s var(--ease);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
 .now-showing {
   display: flex;
   align-items: center;
@@ -544,23 +599,23 @@ textarea {
 }
 
 .btn--primary {
-  background: var(--gold);
-  color: var(--ink-900);
+  background: var(--blue-jet);
+  color: #ffffff;
 }
 
 .btn--primary:hover:not(:disabled) {
-  background: var(--gold-soft);
+  background: var(--blue-light);
 }
 
 .btn--ghost {
-  border-color: var(--line-strong);
+  border-color: var(--blue-jet);
   background: transparent;
-  color: var(--text);
+  color: var(--blue-jet);
 }
 
 .btn--ghost:hover:not(:disabled) {
-  background: rgba(200, 164, 77, 0.1);
-  border-color: var(--gold);
+  background: rgba(30, 100, 200, 0.1);
+  border-color: var(--blue-light);
 }
 
 .btn--block {

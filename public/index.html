@@ -319,6 +319,14 @@
               <i class="fa-solid fa-comments" aria-hidden="true"></i>
               <div><strong>Marathi, Hindi or English</strong><span>Talk to us in whichever you are most comfortable with - including your parents, if they are the ones with the questions.</span></div>
             </li>
+            <li class="reveal">
+              <i class="fa-solid fa-users" aria-hidden="true"></i>
+              <div><strong>Group tours and study trips</strong><span>We organise group holidays, school study tours with educational focus (ISRO visits, heritage sites), and international study tours for college expeditions.</span></div>
+            </li>
+            <li class="reveal">
+              <i class="fa-solid fa-train" aria-hidden="true"></i>
+              <div><strong>Authorised railway booking partner</strong><span>Seamless rail travel coordination across all of India - booked and confirmed as part of your complete itinerary.</span></div>
+            </li>
           </ul>
         </div>
       </section>
@@ -1393,25 +1401,81 @@
                 get through the process without losing a working day to it.
               </p>
 
-              <div class="passport__cols">
-                <div>
-                  <h3 class="minor-head">What we help with</h3>
-                  <ul class="checklist">
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Fresh applications and renewals</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Tatkal appointments when the travel date is close</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Minor passports for children under 18</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Form filling, appointment slots and document checks</li>
-                    <li><i class="fa-solid fa-check" aria-hidden="true"></i> Corrections to name, address or date of birth</li>
-                  </ul>
+              <div class="passport__tabs">
+                <button class="passport__tab" aria-selected="true" data-tab="normal">
+                  <i class="fa-solid fa-clock" aria-hidden="true"></i> Normal Processing
+                </button>
+                <button class="passport__tab" aria-selected="false" data-tab="tatkal">
+                  <i class="fa-solid fa-zap" aria-hidden="true"></i> Tatkal (Urgent)
+                </button>
+                <button class="passport__tab" aria-selected="false" data-tab="visa">
+                  <i class="fa-solid fa-globe" aria-hidden="true"></i> Visa Information
+                </button>
+              </div>
+
+              <div class="passport__content" id="normal-content">
+                <div class="passport__cols">
+                  <div>
+                    <h3 class="minor-head">What we help with</h3>
+                    <ul class="checklist">
+                      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Fresh applications and renewals</li>
+                      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Minor passports for children under 18</li>
+                      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Form filling, appointment slots and document checks</li>
+                      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Corrections to name, address or date of birth</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 class="minor-head">Keep these ready</h3>
+                    <ul class="checklist">
+                      <li><i class="fa-solid fa-id-card" aria-hidden="true"></i> Aadhaar, PAN, Voter ID or Driving Licence</li>
+                      <li><i class="fa-solid fa-house" aria-hidden="true"></i> Bank passbook, electricity bill or rent agreement</li>
+                      <li><i class="fa-solid fa-certificate" aria-hidden="true"></i> Birth certificate or 10th school leaving certificate</li>
+                      <li><i class="fa-solid fa-child" aria-hidden="true"></i> For minors, both parents' passports or IDs</li>
+                    </ul>
+                  </div>
                 </div>
-                <div>
-                  <h3 class="minor-head">Keep these ready</h3>
-                  <ul class="checklist">
-                    <li><i class="fa-solid fa-id-card" aria-hidden="true"></i> Aadhaar, PAN, Voter ID or Driving Licence</li>
-                    <li><i class="fa-solid fa-house" aria-hidden="true"></i> Bank passbook, electricity bill or rent agreement</li>
-                    <li><i class="fa-solid fa-certificate" aria-hidden="true"></i> Birth certificate or 10th school leaving certificate</li>
-                    <li><i class="fa-solid fa-child" aria-hidden="true"></i> For minors, both parents' passports or IDs</li>
-                  </ul>
+              </div>
+
+              <div class="passport__content" id="tatkal-content" style="display: none;">
+                <div class="passport__cols">
+                  <div>
+                    <h3 class="minor-head">Tatkal Service</h3>
+                    <ul class="checklist">
+                      <li><i class="fa-solid fa-zap" aria-hidden="true"></i> Fast-track processing for urgent travel</li>
+                      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Same-day or next-day appointments available</li>
+                      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Priority application handling</li>
+                      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Expedited document verification</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 class="minor-head">Keep these ready</h3>
+                    <ul class="checklist">
+                      <li><i class="fa-solid fa-id-card" aria-hidden="true"></i> Aadhaar, PAN, Voter ID or Driving Licence</li>
+                      <li><i class="fa-solid fa-house" aria-hidden="true"></i> Bank passbook, electricity bill or rent agreement</li>
+                      <li><i class="fa-solid fa-certificate" aria-hidden="true"></i> Birth certificate or 10th school leaving certificate</li>
+                      <li><i class="fa-solid fa-phone" aria-hidden="true"></i> Valid contact number for quick updates</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="passport__content" id="visa-content" style="display: none;">
+                <div class="passport__cols">
+                  <div>
+                    <h3 class="minor-head">Do you have a valid visa?</h3>
+                    <ul class="checklist">
+                      <li><i class="fa-solid fa-check" aria-hidden="true"></i> If you already have a valid visa, we confirm your travel dates align with its validity</li>
+                      <li><i class="fa-solid fa-check" aria-hidden="true"></i> Our team verifies visa requirements for your destination</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h3 class="minor-head">Visa Processing</h3>
+                    <ul class="checklist">
+                      <li><i class="fa-solid fa-globe" aria-hidden="true"></i> <strong>Visa on Arrival:</strong> Straightforward process for eligible countries</li>
+                      <li><i class="fa-solid fa-file-alt" aria-hidden="true"></i> <strong>Visa Application Required:</strong> We guide you through the complete process and handle document submission</li>
+                      <li><i class="fa-solid fa-headset" aria-hidden="true"></i> Full support from application to approval</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1467,11 +1531,6 @@
             <details class="faq__item reveal">
               <summary>My parents are travelling. Can you plan around that?</summary>
               <div class="faq__answer"><p>This is a large part of what we do. Walking distances get checked, sightseeing days get shortened, rest gaps go into the itinerary, wheelchair assistance is arranged at every airport, and vegetarian or Jain meals are confirmed with hotels before arrival rather than requested at the counter.</p></div>
-            </details>
-
-            <details class="faq__item reveal">
-              <summary>What if something goes wrong while we are there?</summary>
-              <div class="faq__answer"><p>You message us. A delayed flight, a room that is not what was promised, a transfer that did not turn up - it gets handled from this end while you are still standing there. That is the actual difference between booking through us and booking it yourself online.</p></div>
             </details>
 
             <details class="faq__item reveal">
