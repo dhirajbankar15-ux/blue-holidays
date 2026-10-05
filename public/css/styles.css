@@ -1074,7 +1074,9 @@ textarea {
   }
 
   .site-nav {
-    display: none;
+    display: flex;
+    gap: 12px;
+    font-size: 12px;
   }
 
   /* The number is hidden from view but must stay in the accessibility tree,
