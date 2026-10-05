@@ -1,0 +1,27 @@
+<svg viewBox="0 0 900 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Jet airplane silhouette -->
+  <g id="jet">
+    <!-- Main fuselage -->
+    <path d="M 200 180 Q 220 160 280 140 L 450 100 Q 550 80 600 100 L 620 180 Q 600 200 500 210 L 280 220 Q 220 220 200 200 Z" fill="#1e40af" stroke="#1e40af" stroke-width="2"/>
+
+    <!-- Cockpit window -->
+    <ellipse cx="580" cy="160" rx="20" ry="25" fill="white" opacity="0.9"/>
+
+    <!-- Landing gear -->
+    <circle cx="350" cy="220" r="8" fill="#1e40af"/>
+    <line x1="350" y1="220" x2="350" y2="250" stroke="#1e40af" stroke-width="3"/>
+
+    <!-- Swept wing lines -->
+    <path d="M 280 140 Q 200 120 120 180 Q 100 200 110 220 Q 200 180 280 200" fill="#1e40af" opacity="0.85"/>
+    <path d="M 280 140 Q 200 100 80 60 Q 60 55 70 75 Q 180 110 280 160" fill="#1e40af" opacity="0.9"/>
+  </g>
+
+  <!-- Text -->
+  <text x="200" y="300" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#1e40af">BLUE</text>
+  <text x="640" y="300" font-family="Arial, sans-serif" font-size="72" font-weight="bold" fill="#f59e0b">JET</text>
+
+  <text x="200" y="360" font-family="Arial, sans-serif" font-size="64" font-weight="bold" fill="#c2185b">HOLIDAYS</text>
+
+  <!-- Tagline -->
+  <text x="200" y="390" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#374151">A PERFECT TRAVEL PARTNER</text>
+</svg>

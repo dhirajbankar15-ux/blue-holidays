@@ -159,18 +159,18 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0 !important;
+  opacity: 1;
   /* Held slightly past full-bleed so the slow drift never exposes an edge. */
   transform: scale(1.08);
   transition: opacity 0.9s var(--ease);
   will-change: opacity;
-  display: none;
+  display: block;
 }
 
 .stage__media.is-active {
-  opacity: 0 !important;
-  animation: none;
-  display: none;
+  opacity: 1;
+  animation: stage-drift 45s ease-in-out infinite;
+  display: block;
 }
 
 @keyframes stage-drift {
@@ -239,8 +239,8 @@ textarea {
 .site-header__inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  justify-content: flex-start;
+  gap: 60px;
 }
 
 .brand {
