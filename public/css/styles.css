@@ -211,14 +211,14 @@ textarea {
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
-  padding: 20px 0;
+  padding: 12px 0;
   transition: padding 0.4s var(--ease), background-color 0.4s var(--ease),
     border-color 0.4s var(--ease), backdrop-filter 0.4s var(--ease);
   border-bottom: 1px solid transparent;
 }
 
 .site-header.is-stuck {
-  padding: 12px 0;
+  padding: 8px 0;
   background: var(--glass-solid);
   border-bottom-color: var(--line);
   backdrop-filter: blur(18px) saturate(140%);
@@ -228,7 +228,7 @@ textarea {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 20px;
 }
 
 .brand {
@@ -244,7 +244,7 @@ textarea {
 }
 
 .brand__logo {
-  max-width: 140px;
+  max-width: 110px;
   height: auto;
   flex: none;
   display: block;
