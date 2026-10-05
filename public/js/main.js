@@ -496,6 +496,36 @@
   })();
 
   /* =======================================================================
+     Customised Tours Tabs
+     ======================================================================= */
+
+  (function () {
+    var tabs = Array.prototype.slice.call(document.querySelectorAll(".tour-tab"));
+    if (!tabs.length) return;
+
+    function show(tourType) {
+      tabs.forEach(function (tab) {
+        var isActive = tab.dataset.tour === tourType;
+        tab.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+
+      var contents = Array.prototype.slice.call(document.querySelectorAll(".tour-content"));
+      contents.forEach(function (content) {
+        var isActive = (content.id === tourType + "-content");
+        content.style.display = isActive ? "block" : "none";
+      });
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        show(tab.dataset.tour);
+      });
+    });
+
+    show("group");
+  })();
+
+  /* =======================================================================
      Footer year
      ======================================================================= */
 

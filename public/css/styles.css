@@ -492,6 +492,78 @@ textarea {
   to { opacity: 1; }
 }
 
+.tour-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 32px 0 32px 0;
+}
+
+.tour-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border: 2px solid var(--blue-jet);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--blue-jet);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s var(--ease);
+}
+
+.tour-tab i {
+  font-size: 14px;
+  color: var(--blue-jet);
+}
+
+.tour-tab:hover {
+  background: rgba(30, 100, 200, 0.1);
+  border-color: var(--blue-light);
+  color: var(--blue-light);
+}
+
+.tour-tab[aria-selected="true"] {
+  background: var(--blue-jet);
+  border-color: var(--blue-jet);
+  color: #ffffff;
+}
+
+.tour-tab[aria-selected="true"] i {
+  color: #ffffff;
+}
+
+.tour-content {
+  animation: fadeIn 0.3s var(--ease);
+}
+
+.tour-details {
+  background: rgba(30, 100, 200, 0.08);
+  border: 1px solid rgba(30, 100, 200, 0.15);
+  padding: 32px;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
+.tour-details h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--text);
+}
+
+.tour-details p {
+  margin-bottom: 20px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.tour-details .checklist {
+  margin-bottom: 24px;
+}
+
 .now-showing {
   display: flex;
   align-items: center;
