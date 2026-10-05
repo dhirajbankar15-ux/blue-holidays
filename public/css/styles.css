@@ -18,21 +18,22 @@
 }
 
 :root {
-  --ink-900: #0f1423;
-  --ink-800: #1a2340;
-  --ink-700: #253354;
-  --ink-600: #304568;
+  --ink-900: #0a0f1a;
+  --ink-800: #141d2e;
+  --ink-700: #1f2d42;
+  --ink-600: #2a3d56;
 
-  --blue-jet: #1e64c8;
-  --blue-light: #3b7dd8;
-  --gold: #d4af37;
-  --gold-soft: #e4c878;
-  --sky: #64b5f6;
+  --blue-jet: #5b9fd8;
+  --blue-light: #7ab5e8;
+  --blue-accent: #3d8ac9;
+  --gold: #d4a574;
+  --gold-soft: #e4b896;
+  --sky: #64c1ff;
   --positive: #66bb6a;
   --negative: #ef5350;
 
-  --text: #f5f7fb;
-  --muted: #9fadc4;
+  --text: #f8fafc;
+  --muted: #a8b5c4;
   --faint: #8b98ad; /* 6.4:1 on --ink-800; #64748b failed WCAG AA */
 
   --line: rgba(30, 100, 200, 0.12);
@@ -81,7 +82,7 @@ html {
 
 body {
   min-height: 100svh;
-  background: var(--ink-900);
+  background: linear-gradient(135deg, #1a3a52 0%, #0a0f1a 50%, #050810 100%);
   color: var(--text);
   font-family: var(--font-ui);
   font-size: 16px;
@@ -443,33 +444,38 @@ textarea {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin: 32px 0 24px 0;
+  margin: 24px 0 24px 0;
+  width: 100%;
+  min-height: 48px;
+  padding: 8px 0;
+  background: rgba(91, 159, 216, 0.15);
+  border: 1px solid rgba(91, 159, 216, 0.3);
+  border-radius: 6px;
 }
 
 .passport__tab {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   gap: 8px;
-  padding: 11px 22px;
-  border: 1px solid var(--line);
+  padding: 12px 24px;
+  border: 2px solid rgba(91, 159, 216, 0.5);
   border-radius: 6px;
-  background: rgba(10, 17, 28, 0.5);
-  backdrop-filter: blur(10px);
-  color: var(--muted);
-  font-size: 13px;
+  background: rgba(91, 159, 216, 0.12);
+  color: var(--blue-jet);
+  font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s var(--ease);
+  white-space: nowrap;
 }
 
 .passport__tab i {
-  font-size: 13px;
+  font-size: 14px;
   color: var(--blue-jet);
-  transition: color 0.3s var(--ease);
 }
 
 .passport__tab:hover {
-  color: var(--text);
+  background: rgba(91, 159, 216, 0.15);
   border-color: var(--blue-jet);
 }
 
@@ -497,6 +503,7 @@ textarea {
   flex-wrap: wrap;
   gap: 12px;
   margin: 32px 0 32px 0;
+  width: 100%;
 }
 
 .tour-tab {
@@ -504,9 +511,9 @@ textarea {
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
-  border: 2px solid var(--blue-jet);
-  border-radius: 8px;
-  background: transparent;
+  border: 2px solid rgba(91, 159, 216, 0.4);
+  border-radius: 6px;
+  background: rgba(91, 159, 216, 0.08);
   color: var(--blue-jet);
   font-size: 14px;
   font-weight: 600;
@@ -520,9 +527,8 @@ textarea {
 }
 
 .tour-tab:hover {
-  background: rgba(30, 100, 200, 0.1);
-  border-color: var(--blue-light);
-  color: var(--blue-light);
+  background: rgba(91, 159, 216, 0.15);
+  border-color: var(--blue-jet);
 }
 
 .tour-tab[aria-selected="true"] {
