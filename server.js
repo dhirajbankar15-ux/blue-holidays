@@ -35,7 +35,7 @@ app.use((req, res, next) => {
 const nodemailer = require('nodemailer');
 
 // Where enquiries are emailed. Must match the address shown on the site.
-const NOTIFY_TO = process.env.NOTIFY_EMAIL || 'bluejetholidaypune@gmail.com';
+const NOTIFY_TO = process.env.NOTIFY_EMAIL || 'Info@bluejetholidays.in';
 
 // A placeholder in .env is not a configuration, so treat it as absent rather
 // than building a transport that will fail on every send.

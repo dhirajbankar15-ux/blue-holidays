@@ -18,28 +18,32 @@
 }
 
 :root {
-  --ink-900: #0a0f1a;
-  --ink-800: #141d2e;
-  --ink-700: #1f2d42;
-  --ink-600: #2a3d56;
+  /* New Sky-Focused Palette */
+  --bg-primary: #f0f7ff;
+  --bg-secondary: #ffffff;
+  --bg-accent-light: #e0f2ff;
 
-  --blue-jet: #5b9fd8;
-  --blue-light: #7ab5e8;
-  --blue-accent: #3d8ac9;
+  --sky-dark: #0066cc;
+  --sky-main: #0080ff;
+  --sky-light: #64c1ff;
+  --teal-accent: #00d4e8;
+  --teal-bright: #00e8ff;
   --gold: #d4a574;
   --gold-soft: #e4b896;
-  --sky: #64c1ff;
+
+  --text-dark: #0a1929;
+  --text-main: #1a1a1a;
+  --text-light: #666666;
+  --text-muted: #999999;
+
   --positive: #66bb6a;
   --negative: #ef5350;
+  --warning: #ffb703;
 
-  --text: #f8fafc;
-  --muted: #a8b5c4;
-  --faint: #8b98ad; /* 6.4:1 on --ink-800; #64748b failed WCAG AA */
-
-  --line: rgba(30, 100, 200, 0.12);
-  --line-strong: rgba(30, 100, 200, 0.25);
-  --glass: rgba(10, 17, 28, 0.66);
-  --glass-solid: rgba(10, 17, 28, 0.92);
+  --line: rgba(0, 128, 255, 0.1);
+  --line-strong: rgba(0, 128, 255, 0.25);
+  --glass: rgba(255, 255, 255, 0.8);
+  --glass-solid: rgba(255, 255, 255, 0.95);
 
   --font-display: "Cormorant Garamond", "Cormorant Fallback", "Times New Roman", serif;
   --font-ui: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -82,8 +86,8 @@ html {
 
 body {
   min-height: 100svh;
-  background: linear-gradient(135deg, #1a3a52 0%, #0a0f1a 50%, #050810 100%);
-  color: var(--text);
+  background: #ffffff;
+  color: var(--text-main);
   font-family: var(--font-ui);
   font-size: 16px;
   line-height: 1.6;
@@ -111,7 +115,7 @@ textarea {
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid #0080ff;
   outline-offset: 3px;
 }
 
@@ -122,7 +126,7 @@ textarea {
   z-index: 200;
   padding: 12px 20px;
   background: var(--gold);
-  color: var(--ink-900);
+  color: #1a1a1a;
   font-weight: 700;
   border-radius: var(--radius);
   transition: top 0.2s var(--ease);
@@ -146,7 +150,7 @@ textarea {
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background: var(--ink-900);
+  background: #ffffff;
 }
 
 .stage__media {
@@ -155,16 +159,18 @@ textarea {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
+  opacity: 0 !important;
   /* Held slightly past full-bleed so the slow drift never exposes an edge. */
   transform: scale(1.08);
   transition: opacity 0.9s var(--ease);
   will-change: opacity;
+  display: none;
 }
 
 .stage__media.is-active {
-  opacity: 1;
-  animation: stage-drift 32s ease-in-out infinite alternate;
+  opacity: 0 !important;
+  animation: none;
+  display: none;
 }
 
 @keyframes stage-drift {
@@ -184,12 +190,12 @@ textarea {
   background:
     linear-gradient(
       to bottom,
-      rgba(5, 9, 15, 0.78) 0%,
-      rgba(5, 9, 15, 0.42) 32%,
-      rgba(5, 9, 15, 0.56) 62%,
-      var(--ink-900) 96%
+      rgba(255, 255, 255, 0.05) 0%,
+      rgba(255, 255, 255, 0.02) 32%,
+      rgba(255, 255, 255, 0.03) 62%,
+      rgba(255, 255, 255, 0.05) 96%
     ),
-    radial-gradient(120% 90% at 50% 30%, transparent 40%, rgba(5, 9, 15, 0.72) 100%);
+    radial-gradient(120% 90% at 50% 30%, transparent 40%, rgba(255, 255, 255, 0.02) 100%);
 }
 
 .stage__grain {
@@ -215,16 +221,19 @@ textarea {
   inset: 0 0 auto;
   z-index: 100;
   padding: 12px 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid rgba(0, 128, 255, 0.15);
   transition: padding 0.4s var(--ease), background-color 0.4s var(--ease),
-    border-color 0.4s var(--ease), backdrop-filter 0.4s var(--ease);
-  border-bottom: 1px solid transparent;
+    border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
+  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.08);
 }
 
 .site-header.is-stuck {
   padding: 8px 0;
-  background: var(--glass-solid);
-  border-bottom-color: var(--line);
-  backdrop-filter: blur(18px) saturate(140%);
+  background: rgba(255, 255, 255, 0.98);
+  border-bottom-color: rgba(0, 128, 255, 0.2);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.12);
 }
 
 .site-header__inner {
@@ -267,7 +276,7 @@ textarea {
   font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.42em;
-  color: var(--gold);
+  color: #00d4e8;
 }
 
 .site-nav {
@@ -279,7 +288,7 @@ textarea {
 
 .site-nav a {
   position: relative;
-  color: var(--muted);
+  color: var(--text-light);
   padding-block: 4px;
   transition: color 0.3s var(--ease);
 }
@@ -290,8 +299,8 @@ textarea {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: 1px;
-  background: var(--gold);
+  height: 2px;
+  background: var(--teal-accent);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.4s var(--ease);
@@ -299,7 +308,7 @@ textarea {
 
 .site-nav a:hover,
 .site-nav a:focus-visible {
-  color: var(--text);
+  color: var(--sky-main);
 }
 
 .site-nav a:hover::after,
@@ -309,34 +318,36 @@ textarea {
 }
 
 .header-call {
-  display: inline-flex;
+  display: none !important;
   align-items: center;
   gap: 10px;
   padding: 12px 22px;
-  border: 1px solid var(--line-strong);
+  border: 2px solid var(--teal-accent);
   border-radius: 999px;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 0.02em;
+  color: var(--teal-accent);
+  background: transparent;
   transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease),
     color 0.3s var(--ease);
 }
 
 .header-call i {
-  color: var(--gold);
+  color: var(--teal-accent);
   transition: color 0.3s var(--ease);
 }
 
 .header-call:hover,
 .header-call:focus-visible {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--ink-900);
+  background: var(--teal-accent);
+  border-color: var(--teal-accent);
+  color: white;
 }
 
 .header-call:hover i,
 .header-call:focus-visible i {
-  color: var(--ink-900);
+  color: white;
 }
 
 /* =========================================================================
@@ -362,14 +373,14 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--gold-soft);
+  color: var(--sky-main);
 }
 
 .eyebrow::before {
   content: "";
   width: 32px;
-  height: 1px;
-  background: var(--gold);
+  height: 2px;
+  background: var(--sky-main);
 }
 
 .hero__title {
@@ -379,18 +390,19 @@ textarea {
   font-size: clamp(2.9rem, 7vw, 5.4rem);
   line-height: 1.02;
   letter-spacing: -0.015em;
+  color: #1a1a1a;
 }
 
 .hero__title em {
   font-style: italic;
-  color: var(--gold-soft);
+  color: var(--teal-bright);
 }
 
 .hero__lede {
   margin-top: 22px;
   max-width: 54ch;
   font-size: clamp(1rem, 1.5vw, 1.12rem);
-  color: var(--muted);
+  color: #666666;
 }
 
 /* Destination selector ---------------------------------------------------- */
@@ -407,11 +419,11 @@ textarea {
   align-items: center;
   gap: 10px;
   padding: 13px 24px;
-  border: 1px solid var(--line);
+  border: 1px solid rgba(0, 128, 255, 0.3);
   border-radius: 999px;
-  background: rgba(10, 17, 28, 0.5);
-  backdrop-filter: blur(10px);
-  color: var(--muted);
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  color: var(--text-light);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -421,23 +433,24 @@ textarea {
 
 .dest-tab i {
   font-size: 13px;
-  color: var(--gold);
+  color: var(--teal-accent);
   transition: color 0.3s var(--ease);
 }
 
 .dest-tab:hover {
-  color: var(--text);
-  border-color: var(--line-strong);
+  color: var(--sky-main);
+  border-color: var(--sky-main);
+  background: rgba(255, 255, 255, 0.9);
 }
 
 .dest-tab[aria-selected="true"] {
-  background: var(--gold);
-  border-color: var(--gold);
-  color: var(--ink-900);
+  background: var(--teal-accent);
+  border-color: var(--teal-accent);
+  color: white;
 }
 
 .dest-tab[aria-selected="true"] i {
-  color: var(--ink-900);
+  color: white;
 }
 
 .passport__tabs {
@@ -448,8 +461,8 @@ textarea {
   width: 100%;
   min-height: 48px;
   padding: 8px 0;
-  background: rgba(91, 159, 216, 0.15);
-  border: 1px solid rgba(91, 159, 216, 0.3);
+  background: rgba(100, 193, 255, 0.08);
+  border: 1px solid rgba(100, 193, 255, 0.2);
   border-radius: 6px;
 }
 
@@ -458,10 +471,10 @@ textarea {
   align-items: center;
   gap: 8px;
   padding: 12px 24px;
-  border: 2px solid rgba(91, 159, 216, 0.5);
+  border: 2px solid rgba(0, 128, 255, 0.3);
   border-radius: 6px;
-  background: rgba(91, 159, 216, 0.12);
-  color: var(--blue-jet);
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--sky-main);
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
@@ -471,17 +484,17 @@ textarea {
 
 .passport__tab i {
   font-size: 14px;
-  color: var(--blue-jet);
+  color: var(--sky-main);
 }
 
 .passport__tab:hover {
-  background: rgba(91, 159, 216, 0.15);
-  border-color: var(--blue-jet);
+  background: rgba(255, 255, 255, 0.8);
+  border-color: var(--sky-main);
 }
 
 .passport__tab[aria-selected="true"] {
-  background: var(--blue-jet);
-  border-color: var(--blue-jet);
+  background: var(--sky-main);
+  border-color: var(--sky-main);
   color: #ffffff;
 }
 
@@ -557,12 +570,12 @@ textarea {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 16px;
-  color: var(--text);
+  color: #1a1a1a;
 }
 
 .tour-details p {
   margin-bottom: 20px;
-  color: var(--muted);
+  color: #666666;
   line-height: 1.6;
 }
 
@@ -590,7 +603,7 @@ textarea {
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: #0080ff;
 }
 
 .now-showing__dot {
@@ -670,7 +683,7 @@ textarea {
 }
 
 .dock__field select option {
-  background: var(--ink-700);
+  background: #e0f2ff;
 }
 
 /* =========================================================================
@@ -694,23 +707,24 @@ textarea {
 }
 
 .btn--primary {
-  background: var(--blue-jet);
-  color: #ffffff;
+  background: var(--teal-accent);
+  color: white;
 }
 
 .btn--primary:hover:not(:disabled) {
-  background: var(--blue-light);
+  background: var(--teal-bright);
+  box-shadow: 0 4px 12px rgba(0, 212, 232, 0.3);
 }
 
 .btn--ghost {
-  border-color: var(--blue-jet);
+  border-color: var(--teal-accent);
   background: transparent;
-  color: var(--blue-jet);
+  color: var(--teal-accent);
 }
 
 .btn--ghost:hover:not(:disabled) {
-  background: rgba(30, 100, 200, 0.1);
-  border-color: var(--blue-light);
+  background: rgba(0, 212, 232, 0.1);
+  border-color: var(--teal-bright);
 }
 
 .btn--block {
@@ -727,7 +741,7 @@ textarea {
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--blue-jet);
+  outline: 2px solid var(--teal-accent);
   outline-offset: 2px;
 }
 
@@ -743,8 +757,8 @@ textarea {
   background: linear-gradient(
     to bottom,
     transparent,
-    rgba(5, 9, 15, 0.94) 12%,
-    rgba(5, 9, 15, 0.94) 88%,
+    rgba(224, 242, 255, 0.6) 12%,
+    rgba(224, 242, 255, 0.6) 88%,
     transparent
   );
 }
@@ -760,18 +774,19 @@ textarea {
   font-weight: 600;
   font-size: clamp(2.2rem, 4.4vw, 3.3rem);
   line-height: 1.1;
+  color: #1a1a1a;
 }
 
 .section-head__lede {
   margin-top: 16px;
-  color: var(--muted);
+  color: #666666;
 }
 
 .panel {
-  border: 1px solid var(--line);
+  border: 1px solid rgba(0, 128, 255, 0.15);
   border-radius: var(--radius-lg);
-  background: var(--glass);
-  backdrop-filter: blur(20px) saturate(140%);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
 }
 
 .tag {
@@ -779,13 +794,14 @@ textarea {
   align-items: center;
   gap: 8px;
   padding: 7px 16px;
-  border: 1px solid var(--line-strong);
+  border: 1px solid #00d4e8;
   border-radius: 999px;
   font-size: 10.5px;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold-soft);
+  color: #00d4e8;
+  background: rgba(0, 212, 232, 0.05);
 }
 
 /* Passport ---------------------------------------------------------------- */
@@ -806,7 +822,7 @@ textarea {
   gap: 10px;
   margin-top: 28px;
   font-size: 14px;
-  color: var(--muted);
+  color: #666666;
 }
 
 .checklist li {
@@ -818,7 +834,7 @@ textarea {
 .checklist i {
   margin-top: 5px;
   font-size: 11px;
-  color: var(--gold);
+  color: #00d4e8;
   flex: none;
 }
 
@@ -837,7 +853,7 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: #0066cc;
 }
 
 .field input,
@@ -845,10 +861,11 @@ textarea {
 .field textarea {
   width: 100%;
   padding: 14px 16px;
-  border: 1px solid var(--line);
+  border: 1px solid #d4d4d4;
   border-radius: var(--radius);
-  background: rgba(5, 9, 15, 0.5);
+  background: #f9f9f9;
   font-size: 15px;
+  color: #1a1a1a;
   transition: border-color 0.25s var(--ease), background-color 0.25s var(--ease);
 }
 
@@ -858,20 +875,22 @@ textarea {
 }
 
 .field select option {
-  background: var(--ink-700);
+  background: white;
+  color: #1a1a1a;
 }
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: #55637a;
+  color: #999999;
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus {
   outline: none;
-  border-color: var(--gold);
-  background: rgba(5, 9, 15, 0.78);
+  border-color: #0080ff;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 128, 255, 0.1);
 }
 
 /* :user-invalid only reddens a field the visitor actually filled in wrong,
@@ -925,8 +944,8 @@ textarea {
 
 .site-footer {
   padding: 88px 0 36px;
-  border-top: 1px solid var(--line);
-  background: var(--ink-900);
+  border-top: 1px solid #e0e0e0;
+  background: #f8f9fa;
 }
 
 .footer-grid {
@@ -938,7 +957,7 @@ textarea {
 .footer-about p {
   margin-top: 18px;
   font-size: 14px;
-  color: var(--muted);
+  color: #666666;
   max-width: 42ch;
 }
 
@@ -948,7 +967,7 @@ textarea {
   flex-direction: column;
   gap: 12px;
   font-size: 13.5px;
-  color: var(--muted);
+  color: #666666;
 }
 
 .footer-contact li {
@@ -959,7 +978,7 @@ textarea {
 
 .footer-contact i {
   margin-top: 4px;
-  color: var(--gold);
+  color: #00d4e8;
   flex: none;
 }
 
@@ -968,7 +987,7 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #0080ff;
   margin-bottom: 20px;
 }
 
@@ -978,8 +997,12 @@ textarea {
 
 .footer-col a {
   font-size: 14px;
-  color: var(--muted);
+  color: #666666;
   transition: color 0.25s var(--ease);
+}
+
+.footer-col a:hover {
+  color: #0080ff;
 }
 
 .footer-col a:hover,
@@ -1161,7 +1184,7 @@ textarea {
   font-family: var(--font-display);
   font-size: 30px;
   font-weight: 700;
-  color: var(--gold);
+  color: #00d4e8;
   opacity: 0.6;
   line-height: 1;
 }
@@ -1175,7 +1198,7 @@ textarea {
 
 .journey__step p {
   font-size: 14.5px;
-  color: var(--muted);
+  color: #666666;
 }
 
 /* Assurances ------------------------------------------------------------- */
@@ -1195,7 +1218,7 @@ textarea {
 .assurances i {
   margin-top: 3px;
   font-size: 17px;
-  color: var(--gold);
+  color: #00d4e8;
   flex: none;
 }
 
@@ -1208,7 +1231,7 @@ textarea {
 .assurances span {
   display: block;
   font-size: 14px;
-  color: var(--muted);
+  color: #666666;
 }
 
 /* =========================================================================
@@ -1240,7 +1263,7 @@ textarea {
 .dest-card__frame {
   aspect-ratio: 3 / 2;
   overflow: hidden;
-  background: var(--ink-700);
+  background: #e0f2ff;
 }
 
 .dest-card__frame img {
@@ -1274,13 +1297,13 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #00d4e8;
 }
 
 .dest-card__body > p:not(.dest-card__where):not(.dest-card__season) {
   margin-top: 14px;
   font-size: 14.5px;
-  color: var(--muted);
+  color: #666666;
 }
 
 .dest-card__season {
@@ -1295,7 +1318,7 @@ textarea {
 }
 
 .dest-card__season i {
-  color: var(--gold);
+  color: #00d4e8;
   font-size: 12px;
 }
 
@@ -1309,12 +1332,12 @@ textarea {
   border: 1px dashed var(--line-strong);
   border-radius: var(--radius-lg);
   text-align: center;
-  color: var(--muted);
+  color: #666666;
   font-size: 15px;
 }
 
 .inline-link {
-  color: var(--gold-soft);
+  color: #0080ff;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
@@ -1342,7 +1365,7 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #00d4e8;
   margin-bottom: 16px;
 }
 
@@ -1358,7 +1381,7 @@ textarea {
 
 .passport__icon {
   font-size: 30px;
-  color: var(--gold);
+  color: #00d4e8;
 }
 
 .passport__aside h3 {
@@ -1370,7 +1393,7 @@ textarea {
 
 .passport__aside p {
   font-size: 14.5px;
-  color: var(--muted);
+  color: #666666;
 }
 
 .passport__aside .btn {
@@ -1414,7 +1437,7 @@ textarea {
   font-size: 24px;
   font-weight: 400;
   line-height: 1;
-  color: var(--gold);
+  color: #00d4e8;
   transition: transform 0.35s var(--ease);
 }
 
@@ -1423,7 +1446,7 @@ textarea {
 }
 
 .faq__item summary:hover {
-  color: var(--gold-soft);
+  color: #0080ff;
 }
 
 .faq__answer {
@@ -1432,7 +1455,7 @@ textarea {
 }
 
 .faq__answer p {
-  color: var(--muted);
+  color: #666666;
   font-size: 15px;
 }
 
@@ -1477,7 +1500,7 @@ textarea {
 
 .handoff__label {
   font-size: 13.5px;
-  color: var(--muted);
+  color: #666666;
 }
 
 .handoff__actions {
@@ -1496,7 +1519,7 @@ textarea {
 
 .contact-label {
   font-size: 13.5px;
-  color: var(--muted);
+  color: #666666;
   margin: 0 0 12px 0;
 }
 
@@ -1547,13 +1570,13 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #00d4e8;
   margin-bottom: 16px;
 }
 
 .footer-legal p {
   font-size: 13.5px;
-  color: var(--muted);
+  color: #666666;
   line-height: 1.75;
 }
 
@@ -1602,7 +1625,7 @@ textarea {
   padding: 0;
   border: 1px solid var(--line-strong);
   border-radius: var(--radius-lg);
-  background: var(--ink-800);
+  background: #f0f7ff;
   color: var(--text);
   overflow: hidden;
 }
@@ -1653,8 +1676,8 @@ textarea {
 
 .dmodal__close:hover {
   background: var(--gold);
-  border-color: var(--gold);
-  color: var(--ink-900);
+  border-color: #00d4e8;
+  color: #1a1a1a;
 }
 
 .dmodal__body {
@@ -1669,7 +1692,7 @@ textarea {
   gap: 12px;
   padding: 20px 32px 24px;
   border-top: 1px solid var(--line);
-  background: var(--ink-900);
+  background: #f8f9fa;
 }
 
 .dmodal__foot .btn {
@@ -1688,7 +1711,7 @@ textarea {
   margin: 0;
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--ink-700);
+  background: #e0f2ff;
 }
 
 .gal__item img {
@@ -1708,7 +1731,7 @@ textarea {
 .gal__item figcaption {
   padding: 10px 12px 12px;
   font-size: 12.5px;
-  color: var(--muted);
+  color: #666666;
 }
 
 /* Must-visit list --------------------------------------------------------- */
@@ -1719,7 +1742,26 @@ textarea {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: #00d4e8;
+}
+
+.availability-note {
+  margin: 20px 0 28px;
+  padding: 16px 18px;
+  background: linear-gradient(135deg, rgba(91, 159, 216, 0.15) 0%, rgba(100, 193, 255, 0.08) 100%);
+  border: 1px solid rgba(91, 159, 216, 0.4);
+  border-left: 4px solid var(--blue-jet);
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.availability-note em {
+  font-style: italic;
+  color: #00d4e8;
+  font-weight: 600;
 }
 
 .must-list {
@@ -1746,7 +1788,7 @@ textarea {
   font-family: var(--font-display);
   font-size: 17px;
   font-weight: 700;
-  color: var(--gold);
+  color: #00d4e8;
   opacity: 0.65;
   padding-top: 2px;
 }
@@ -1760,7 +1802,7 @@ textarea {
 .must-list p {
   margin: 0;
   font-size: 14px;
-  color: var(--muted);
+  color: #666666;
 }
 
 /* Practical notes --------------------------------------------------------- */
@@ -1778,7 +1820,7 @@ textarea {
 
 .facts > div {
   padding: 18px 20px;
-  background: var(--ink-800);
+  background: #f0f7ff;
 }
 
 .facts dt {
@@ -1870,7 +1912,7 @@ textarea {
 }
 
 .pkg-card:hover {
-  border-color: var(--gold);
+  border-color: #00d4e8;
   transform: translateY(-4px);
   box-shadow: 0 12px 24px rgba(200, 164, 77, 0.15);
 }
@@ -1930,11 +1972,11 @@ textarea {
   align-items: center;
   gap: 6px;
   font-size: 13px;
-  color: var(--muted);
+  color: #666666;
 }
 
 .pkg-meta-item i {
-  color: var(--gold);
+  color: #00d4e8;
   opacity: 0.7;
 }
 
@@ -1947,7 +1989,7 @@ textarea {
 }
 
 .pkg-card__tier strong {
-  color: var(--gold);
+  color: #00d4e8;
   font-weight: 700;
 }
 
@@ -1963,12 +2005,12 @@ textarea {
 }
 
 .pkg-card__price i {
-  color: var(--gold);
+  color: #00d4e8;
   opacity: 0.8;
 }
 
 .pkg-card__price strong {
-  color: var(--gold);
+  color: #00d4e8;
   font-weight: 700;
   font-size: 15px;
 }
@@ -2006,5 +2048,163 @@ textarea {
 
   .pkg-meta-item {
     font-size: 12px;
+  }
+}
+
+/* Contact & Inquiry Section */
+.section--contact {
+  background: linear-gradient(135deg, rgba(91, 159, 216, 0.12) 0%, rgba(100, 193, 255, 0.06) 100%);
+  border-top: 3px solid var(--blue-jet);
+}
+
+.contact-banner {
+  padding: 48px 0;
+}
+
+.contact-banner__title {
+  font-family: var(--font-display);
+  font-size: 42px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--text);
+}
+
+.contact-banner__subtitle {
+  font-size: 18px;
+  color: var(--blue-light);
+  margin: 0 0 40px;
+  font-weight: 600;
+}
+
+.destinations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 32px;
+  margin: 40px 0;
+  padding: 32px;
+  background: rgba(10, 17, 28, 0.5);
+  border-radius: 8px;
+  border: 1px solid rgba(91, 159, 216, 0.3);
+}
+
+.destinations-column__title {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #00d4e8;
+  margin: 0 0 16px;
+}
+
+.destinations-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.destinations-list li {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666666;
+  margin: 8px 0;
+}
+
+.inquiry-cta {
+  background: linear-gradient(135deg, rgba(91, 159, 216, 0.15), rgba(212, 165, 116, 0.08));
+  border: 2px solid var(--blue-jet);
+  border-radius: 8px;
+  padding: 40px;
+  margin: 40px 0;
+}
+
+.inquiry-cta__text {
+  font-size: 18px;
+  color: var(--text);
+  margin: 0 0 32px;
+  text-align: center;
+}
+
+.contact-methods {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
+  margin: 32px 0 40px;
+}
+
+.contact-method {
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(91, 159, 216, 0.1);
+  border-radius: 6px;
+  border-left: 4px solid var(--blue-jet);
+}
+
+.contact-method__icon {
+  font-size: 32px;
+  flex-shrink: 0;
+}
+
+.contact-method__label {
+  font-size: 12px;
+  font-weight: 700;
+  color: #00d4e8;
+  text-transform: uppercase;
+  margin: 0 0 6px;
+  letter-spacing: 0.05em;
+}
+
+.contact-method__link {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--blue-light);
+  text-decoration: none;
+  display: block;
+  margin: 0 0 4px;
+}
+
+.contact-method__link:hover {
+  color: var(--sky);
+  text-decoration: underline;
+}
+
+.contact-method__note {
+  font-size: 12px;
+  color: #666666;
+  margin: 0;
+}
+
+.inquiry-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.inquiry-buttons .btn {
+  min-width: 200px;
+}
+
+@media (max-width: 768px) {
+  .contact-banner__title {
+    font-size: 32px;
+  }
+
+  .contact-banner__subtitle {
+    font-size: 16px;
+  }
+
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .inquiry-cta {
+    padding: 24px;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr;
   }
 }
