@@ -221,12 +221,11 @@ textarea {
   position: fixed;
   inset: 0 0 auto;
   z-index: 100;
-  padding: 12px 0;
-  background: var(--bg-secondary);
-  border-bottom: 1px solid rgba(0, 128, 255, 0.15);
-  transition: padding 0.4s var(--ease), background-color 0.4s var(--ease),
-    border-color 0.4s var(--ease), box-shadow 0.4s var(--ease);
-  box-shadow: 0 2px 8px rgba(0, 102, 204, 0.08);
+  padding: 16px 0;
+  background: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
 
 .site-header.is-stuck {
@@ -698,36 +697,40 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 32px;
-  border: 1px solid transparent;
-  border-radius: var(--radius);
-  font-size: 14px;
+  padding: 18px 48px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
   font-weight: 700;
   letter-spacing: 0.02em;
   cursor: pointer;
-  transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease),
-    color 0.3s var(--ease), transform 0.3s var(--ease);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .btn--primary {
-  background: var(--teal-accent);
-  color: white;
+  background: #00d4e8;
+  color: #1a1a1a;
 }
 
 .btn--primary:hover:not(:disabled) {
-  background: var(--teal-bright);
-  box-shadow: 0 4px 12px rgba(0, 212, 232, 0.3);
+  background: #00e8ff;
+  box-shadow: 0 8px 24px rgba(0, 212, 232, 0.4);
+  transform: translateY(-2px);
 }
 
 .btn--ghost {
-  border-color: var(--teal-accent);
-  background: transparent;
-  color: var(--teal-accent);
+  border: 2px solid #0080ff;
+  background: white;
+  color: #0080ff;
+  box-shadow: 0 2px 8px rgba(0, 128, 255, 0.15);
 }
 
 .btn--ghost:hover:not(:disabled) {
-  background: rgba(0, 212, 232, 0.1);
-  border-color: var(--teal-bright);
+  background: #0080ff;
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 128, 255, 0.3);
+  transform: translateY(-2px);
 }
 
 .btn--block {
@@ -753,7 +756,7 @@ textarea {
    ========================================================================= */
 
 .section {
-  padding: clamp(80px, 11vw, 140px) 0;
+  padding: clamp(100px, 12vw, 160px) 0;
 }
 
 .section--tinted {
@@ -786,10 +789,15 @@ textarea {
 }
 
 .panel {
-  border: 1px solid rgba(0, 128, 255, 0.15);
-  border-radius: var(--radius-lg);
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px);
+  border: none;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.panel:hover {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
 }
 
 .tag {
@@ -863,13 +871,14 @@ textarea {
 .field select,
 .field textarea {
   width: 100%;
-  padding: 14px 16px;
-  border: 1px solid #d4d4d4;
-  border-radius: var(--radius);
-  background: #f9f9f9;
-  font-size: 15px;
+  padding: 16px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  background: #f8f9fa;
+  font-size: 16px;
   color: #1a1a1a;
-  transition: border-color 0.25s var(--ease), background-color 0.25s var(--ease);
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
 .field textarea {
@@ -893,7 +902,7 @@ textarea {
   outline: none;
   border-color: #0080ff;
   background: #ffffff;
-  box-shadow: 0 0 0 3px rgba(0, 128, 255, 0.1);
+  box-shadow: 0 0 0 4px rgba(0, 128, 255, 0.15), 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* :user-invalid only reddens a field the visitor actually filled in wrong,
