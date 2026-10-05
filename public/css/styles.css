@@ -30,11 +30,12 @@
   --teal-bright: #00e8ff;
   --gold: #d4a574;
   --gold-soft: #e4b896;
+  --blue-jet: #0080ff;
 
   --text-dark: #0a1929;
   --text-main: #1a1a1a;
-  --text-light: #666666;
-  --text-muted: #999999;
+  --text-light: #333333;
+  --text-muted: #555555;
 
   --positive: #66bb6a;
   --negative: #ef5350;
@@ -405,7 +406,7 @@ textarea {
   margin-top: 22px;
   max-width: 54ch;
   font-size: clamp(1rem, 1.5vw, 1.12rem);
-  color: #666666;
+  color: #444444;
 }
 
 /* Destination selector ---------------------------------------------------- */
@@ -422,16 +423,14 @@ textarea {
   align-items: center;
   gap: 10px;
   padding: 13px 24px;
-  border: 1px solid rgba(0, 128, 255, 0.3);
+  border: 2px solid #0080ff;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(8px);
-  color: var(--text-light);
-  font-size: 14px;
-  font-weight: 600;
+  background: white;
+  color: #0080ff;
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
-  transition: color 0.3s var(--ease), border-color 0.3s var(--ease),
-    background-color 0.3s var(--ease);
+  transition: all 0.3s ease;
 }
 
 .dest-tab i {
@@ -441,15 +440,16 @@ textarea {
 }
 
 .dest-tab:hover {
-  color: var(--sky-main);
-  border-color: var(--sky-main);
-  background: rgba(255, 255, 255, 0.9);
+  background: #0080ff;
+  color: white;
+  border-color: #0080ff;
 }
 
 .dest-tab[aria-selected="true"] {
-  background: var(--teal-accent);
-  border-color: var(--teal-accent);
-  color: white;
+  background: #00d4e8;
+  border-color: #00d4e8;
+  color: #1a1a1a;
+  font-weight: 700;
 }
 
 .dest-tab[aria-selected="true"] i {
@@ -578,7 +578,7 @@ textarea {
 
 .tour-details p {
   margin-bottom: 20px;
-  color: #666666;
+  color: #444444;
   line-height: 1.6;
 }
 
@@ -782,7 +782,7 @@ textarea {
 
 .section-head__lede {
   margin-top: 16px;
-  color: #666666;
+  color: #444444;
 }
 
 .panel {
@@ -825,7 +825,7 @@ textarea {
   gap: 10px;
   margin-top: 28px;
   font-size: 14px;
-  color: #666666;
+  color: #444444;
 }
 
 .checklist li {
@@ -884,7 +884,7 @@ textarea {
 
 .field input::placeholder,
 .field textarea::placeholder {
-  color: #999999;
+  color: #777777;
 }
 
 .field input:focus,
@@ -960,7 +960,7 @@ textarea {
 .footer-about p {
   margin-top: 18px;
   font-size: 14px;
-  color: #666666;
+  color: #444444;
   max-width: 42ch;
 }
 
@@ -970,7 +970,7 @@ textarea {
   flex-direction: column;
   gap: 12px;
   font-size: 13.5px;
-  color: #666666;
+  color: #444444;
 }
 
 .footer-contact li {
@@ -1000,7 +1000,7 @@ textarea {
 
 .footer-col a {
   font-size: 14px;
-  color: #666666;
+  color: #444444;
   transition: color 0.25s var(--ease);
 }
 
@@ -1203,7 +1203,7 @@ textarea {
 
 .journey__step p {
   font-size: 14.5px;
-  color: #666666;
+  color: #444444;
 }
 
 /* Assurances ------------------------------------------------------------- */
@@ -1236,7 +1236,7 @@ textarea {
 .assurances span {
   display: block;
   font-size: 14px;
-  color: #666666;
+  color: #444444;
 }
 
 /* =========================================================================
@@ -1308,7 +1308,7 @@ textarea {
 .dest-card__body > p:not(.dest-card__where):not(.dest-card__season) {
   margin-top: 14px;
   font-size: 14.5px;
-  color: #666666;
+  color: #444444;
 }
 
 .dest-card__season {
@@ -1337,7 +1337,7 @@ textarea {
   border: 1px dashed var(--line-strong);
   border-radius: var(--radius-lg);
   text-align: center;
-  color: #666666;
+  color: #444444;
   font-size: 15px;
 }
 
@@ -1398,7 +1398,7 @@ textarea {
 
 .passport__aside p {
   font-size: 14.5px;
-  color: #666666;
+  color: #444444;
 }
 
 .passport__aside .btn {
@@ -1460,7 +1460,7 @@ textarea {
 }
 
 .faq__answer p {
-  color: #666666;
+  color: #444444;
   font-size: 15px;
 }
 
@@ -1505,7 +1505,7 @@ textarea {
 
 .handoff__label {
   font-size: 13.5px;
-  color: #666666;
+  color: #444444;
 }
 
 .handoff__actions {
@@ -1524,7 +1524,7 @@ textarea {
 
 .contact-label {
   font-size: 13.5px;
-  color: #666666;
+  color: #444444;
   margin: 0 0 12px 0;
 }
 
@@ -1581,7 +1581,7 @@ textarea {
 
 .footer-legal p {
   font-size: 13.5px;
-  color: #666666;
+  color: #444444;
   line-height: 1.75;
 }
 
@@ -1736,7 +1736,7 @@ textarea {
 .gal__item figcaption {
   padding: 10px 12px 12px;
   font-size: 12.5px;
-  color: #666666;
+  color: #444444;
 }
 
 /* Must-visit list --------------------------------------------------------- */
@@ -1807,7 +1807,7 @@ textarea {
 .must-list p {
   margin: 0;
   font-size: 14px;
-  color: #666666;
+  color: #444444;
 }
 
 /* Practical notes --------------------------------------------------------- */
@@ -1977,7 +1977,7 @@ textarea {
   align-items: center;
   gap: 6px;
   font-size: 13px;
-  color: #666666;
+  color: #444444;
 }
 
 .pkg-meta-item i {
@@ -2110,7 +2110,7 @@ textarea {
 .destinations-list li {
   font-size: 14px;
   line-height: 1.8;
-  color: #666666;
+  color: #444444;
   margin: 8px 0;
 }
 
@@ -2175,7 +2175,7 @@ textarea {
 
 .contact-method__note {
   font-size: 12px;
-  color: #666666;
+  color: #444444;
   margin: 0;
 }
 

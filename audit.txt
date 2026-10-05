@@ -1,0 +1,11 @@
+WEBSITE AUDIT REPORT
+====================
+
+CHECKING: Text Color Contrast Issues
+CHECKING: Element Visibility
+CHECKING: Form Field Styling
+CHECKING: Button Styling
+CHECKING: Typography Issues
+CHECKING: Spacing & Alignment
+CHECKING: Color Scheme Consistency
+
