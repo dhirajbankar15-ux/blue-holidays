@@ -243,6 +243,13 @@ textarea {
   flex: none;
 }
 
+.brand__logo {
+  max-width: 140px;
+  height: auto;
+  flex: none;
+  display: block;
+}
+
 .brand__name {
   font-family: var(--font-ui);
   font-size: 19px;
@@ -1323,6 +1330,42 @@ textarea {
   flex-wrap: wrap;
   gap: 12px;
   justify-content: center;
+}
+
+.contact-numbers {
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba(200, 164, 77, 0.2);
+  padding-top: 18px;
+}
+
+.contact-label {
+  font-size: 13.5px;
+  color: var(--muted);
+  margin: 0 0 12px 0;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-list li {
+  font-size: 14px;
+}
+
+.contact-list a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-list a:hover {
+  text-decoration: underline;
 }
 
 .privacy-note {

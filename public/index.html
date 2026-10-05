@@ -161,12 +161,7 @@
     <header class="site-header">
       <div class="u-shell site-header__inner">
         <a class="brand" href="#main">
-          <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true" focusable="false">
-            <circle cx="24" cy="24" r="22.5" stroke="#c8a44d" stroke-width="1"/>
-            <path d="M24 9.5 26 22.2 39 27.1v2.4L26 26.7l-.6 7.3 4.6 3v2L24 37.1l-6 1.9v-2l4.6-3-.6-7.3L9 29.5v-2.4l13-4.9L24 9.5Z" fill="#e4c878"/>
-            <path d="M13 34.5c7 3.2 15 3.2 22 0" stroke="#c8a44d" stroke-width="1" stroke-linecap="round" opacity=".75"/>
-          </svg>
-          <span class="brand__name">Blue Jet <span>Holidays</span></span>
+          <img class="brand__logo" src="assets/img/blue-jet-logo.png" alt="Blue Jet Holidays Logo" loading="eager" width="140" height="60" />
         </a>
 
         <nav class="site-nav" aria-label="Primary">
@@ -1544,8 +1539,12 @@
                   <input type="month" id="custMonth" name="month" value="2026-11" />
                 </div>
                 <div class="field">
-                  <label for="custPax">How many travelling</label>
+                  <label for="custPax">Number of passengers</label>
                   <input type="number" id="custPax" name="pax" min="1" max="50" value="4" inputmode="numeric" />
+                </div>
+                <div class="field">
+                  <label for="custDuration">Trip duration (nights)</label>
+                  <input type="number" id="custDuration" name="duration" min="1" max="30" value="5" inputmode="numeric" />
                 </div>
               </div>
 
@@ -1576,6 +1575,16 @@
                     <a class="btn btn--ghost" data-handoff="email" href="#">
                       <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email
                     </a>
+                  </div>
+
+                  <div class="contact-numbers">
+                    <p class="contact-label">Or call us directly:</p>
+                    <ul class="contact-list">
+                      <li><strong>International Enquiry:</strong> <a href="tel:+917620880088">+91 76208 80088</a></li>
+                      <li><strong>Domestic Enquiry:</strong> <a href="tel:+919923181369">+91 99231 81369</a></li>
+                      <li><strong>Passport Seva:</strong> <a href="tel:+917720880088">+91 77208 80088</a></li>
+                      <li><strong>General Inquiry:</strong> <a href="tel:+919673010808">+91 96730 10808</a></li>
+                    </ul>
                   </div>
                 </div>
 
